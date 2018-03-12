@@ -57,6 +57,7 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnMultiplicacion = new javax.swing.JButton();
         jbtnResta = new javax.swing.JButton();
         jbtnDivision = new javax.swing.JButton();
+        jbtnIgual = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -254,6 +255,13 @@ public class JFrameCalculadora extends javax.swing.JFrame {
             }
         });
 
+        jbtnIgual.setText("=");
+        jbtnIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnIgualActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -276,6 +284,15 @@ public class JFrameCalculadora extends javax.swing.JFrame {
                             .addComponent(jbtnNumero7, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jbtnNumero5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jbtnNumero6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jbtnNumero2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jbtnNumero3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jbtnNumeroF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -287,23 +304,14 @@ public class JFrameCalculadora extends javax.swing.JFrame {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jbtnNumeroE, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jbtnNumeroB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jbtnNumero9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jbtnNumero5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jbtnNumero6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jbtnNumero2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jbtnNumero3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(45, 45, 45)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jbtnSuma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jbtnResta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jbtnMultiplicacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jbtnDivision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jbtnNumero9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jbtnSuma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtnResta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtnMultiplicacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtnDivision, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbtnIgual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jrbtnDecimal)
@@ -355,7 +363,8 @@ public class JFrameCalculadora extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtnNumeroC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbtnNumeroD, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtnNumeroE, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtnNumeroE, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbtnNumeroF, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -365,18 +374,12 @@ public class JFrameCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnNumero5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero5ActionPerformed
-//        if (cambioNumero==1){
-//            display.numero1+="5";
-//            jtpDisplay.setText(display.numero1);
-//        }
+
         jtpDisplay.setText(jtpDisplay.getText()+"5");
     }//GEN-LAST:event_jbtnNumero5ActionPerformed
 
     private void jbtnNumero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero1ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="1";
-        jtpDisplay.setText(display.numero1);
-        }
+        jtpDisplay.setText(jtpDisplay.getText()+"1");
     }//GEN-LAST:event_jbtnNumero1ActionPerformed
 
     private void jrbtnBinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnBinarioActionPerformed
@@ -386,6 +389,27 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         
         jbtnNumero0.setEnabled(true);
         jbtnNumero1.setEnabled(true);
+        jbtnNumero2.setEnabled(false);
+        jbtnNumero3.setEnabled(false);
+        jbtnNumero4.setEnabled(false);
+        jbtnNumero5.setEnabled(false);
+        jbtnNumero6.setEnabled(false);
+        jbtnNumero7.setEnabled(false);
+        jbtnNumero8.setEnabled(false);
+        jbtnNumero9.setEnabled(false);
+        jbtnNumeroA.setEnabled(false);
+        jbtnNumeroB.setEnabled(false);
+        jbtnNumeroC.setEnabled(false);
+        jbtnNumeroD.setEnabled(false);
+        jbtnNumeroE.setEnabled(false);        
+        jbtnNumeroF.setEnabled(false);
+        
+        jbtnSuma.setEnabled(true);
+        jbtnResta.setEnabled(true);
+        jbtnMultiplicacion.setEnabled(true);
+        jbtnDivision.setEnabled(true);
+        
+        display.sistemaNu=1;
     }//GEN-LAST:event_jrbtnBinarioActionPerformed
 
     private void jrbtnOctalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnOctalActionPerformed
@@ -401,6 +425,21 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnNumero5.setEnabled(true);
         jbtnNumero6.setEnabled(true);
         jbtnNumero7.setEnabled(true);
+        jbtnNumero8.setEnabled(false);
+        jbtnNumero9.setEnabled(false);
+        jbtnNumeroA.setEnabled(false);
+        jbtnNumeroB.setEnabled(false);
+        jbtnNumeroC.setEnabled(false);
+        jbtnNumeroD.setEnabled(false);
+        jbtnNumeroE.setEnabled(false);        
+        jbtnNumeroF.setEnabled(false);
+        
+        jbtnSuma.setEnabled(true);
+        jbtnResta.setEnabled(true);
+        jbtnMultiplicacion.setEnabled(true);
+        jbtnDivision.setEnabled(true);
+        
+        display.sistemaNu=2;
     }//GEN-LAST:event_jrbtnOctalActionPerformed
 
     private void jrbtnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnDecimalActionPerformed
@@ -417,7 +456,20 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnNumero6.setEnabled(true);
         jbtnNumero7.setEnabled(true);
         jbtnNumero8.setEnabled(true);
-        jbtnNumero9.setEnabled(true);       
+        jbtnNumero9.setEnabled(true); 
+        jbtnNumeroA.setEnabled(false);
+        jbtnNumeroB.setEnabled(false);
+        jbtnNumeroC.setEnabled(false);
+        jbtnNumeroD.setEnabled(false);
+        jbtnNumeroE.setEnabled(false);        
+        jbtnNumeroF.setEnabled(false);
+        
+        jbtnSuma.setEnabled(true);
+        jbtnResta.setEnabled(true);
+        jbtnMultiplicacion.setEnabled(true);
+        jbtnDivision.setEnabled(true);
+        
+        display.sistemaNu=3;
     }//GEN-LAST:event_jrbtnDecimalActionPerformed
 
     private void jrbtnHexaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnHexaActionPerformed
@@ -440,105 +492,99 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnNumeroC.setEnabled(true);
         jbtnNumeroD.setEnabled(true);
         jbtnNumeroE.setEnabled(true);        
-        jbtnNumeroF.setEnabled(true);  
+        jbtnNumeroF.setEnabled(true); 
+        
+        jbtnSuma.setEnabled(true);
+        jbtnResta.setEnabled(true);
+        jbtnMultiplicacion.setEnabled(true);
+        jbtnDivision.setEnabled(true);
+        
+        display.sistemaNu=4;
     }//GEN-LAST:event_jrbtnHexaActionPerformed
 
     private void jbtnNumero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero2ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="2";
-        jtpDisplay.setText(display.numero1);
-        }
+          jtpDisplay.setText(jtpDisplay.getText()+"2");
     }//GEN-LAST:event_jbtnNumero2ActionPerformed
 
     private void jbtnNumero3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero3ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="3";
-        jtpDisplay.setText(display.numero1);
-        }
+        jtpDisplay.setText(jtpDisplay.getText()+"3");
     }//GEN-LAST:event_jbtnNumero3ActionPerformed
 
     private void jbtnNumero4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero4ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="4";
-        jtpDisplay.setText(display.numero1);
-        }
+        jtpDisplay.setText(jtpDisplay.getText()+"4");
     }//GEN-LAST:event_jbtnNumero4ActionPerformed
 
     private void jbtnNumero6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero6ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="6";
-        jtpDisplay.setText(display.numero1);
-        }
+        jtpDisplay.setText(jtpDisplay.getText()+"6");
     }//GEN-LAST:event_jbtnNumero6ActionPerformed
 
     private void jbtnNumero7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero7ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="7";
-        jtpDisplay.setText(display.numero1);
-        }
+        jtpDisplay.setText(jtpDisplay.getText()+"7");
     }//GEN-LAST:event_jbtnNumero7ActionPerformed
 
     private void jbtnNumero8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero8ActionPerformed
-        if (cambioNumero==1){
-        display.numero1+="8";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"8");
     }//GEN-LAST:event_jbtnNumero8ActionPerformed
 
     private void jbtnNumero9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero9ActionPerformed
-        display.numero1+="9";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"9");
     }//GEN-LAST:event_jbtnNumero9ActionPerformed
 
     private void jbtnNumero0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero0ActionPerformed
-        display.numero1+="0";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"0");
     }//GEN-LAST:event_jbtnNumero0ActionPerformed
 
     private void jbtnNumeroAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroAActionPerformed
-        display.numero1+="A";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"A");
     }//GEN-LAST:event_jbtnNumeroAActionPerformed
 
     private void jbtnNumeroBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroBActionPerformed
-        display.numero1+="B";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"B");
     }//GEN-LAST:event_jbtnNumeroBActionPerformed
 
     private void jbtnNumeroCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroCActionPerformed
-        display.numero1+="C";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"C");
     }//GEN-LAST:event_jbtnNumeroCActionPerformed
 
     private void jbtnNumeroDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroDActionPerformed
-        display.numero1+="D";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"D");
     }//GEN-LAST:event_jbtnNumeroDActionPerformed
 
     private void jbtnNumeroEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroEActionPerformed
-        display.numero1+="E";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"E");
     }//GEN-LAST:event_jbtnNumeroEActionPerformed
 
     private void jbtnNumeroFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumeroFActionPerformed
-        display.numero1+="F";
-        jtpDisplay.setText(display.numero1);
+        jtpDisplay.setText(jtpDisplay.getText()+"F");
     }//GEN-LAST:event_jbtnNumeroFActionPerformed
 
     private void jbtnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSumaActionPerformed
         
+        jtpDisplay.setText("");
+        display.operador=1;
     }//GEN-LAST:event_jbtnSumaActionPerformed
 
     private void jbtnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRestaActionPerformed
-        // TODO add your handling code here:
+       display.numero1=jtpDisplay.getText();
+       jtpDisplay.setText("");
+       display.operador=2;
     }//GEN-LAST:event_jbtnRestaActionPerformed
 
     private void jbtnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMultiplicacionActionPerformed
-        // TODO add your handling code here:
+        display.numero1=jtpDisplay.getText();
+        jtpDisplay.setText("");
+        display.operador=3;
     }//GEN-LAST:event_jbtnMultiplicacionActionPerformed
 
     private void jbtnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDivisionActionPerformed
-        // TODO add your handling code here:
+        display.numero1=jtpDisplay.getText();
+        jtpDisplay.setText("");
+        display.operador=4;
     }//GEN-LAST:event_jbtnDivisionActionPerformed
+
+    private void jbtnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnIgualActionPerformed
+        display.numero2=jtpDisplay.getText();
+    }//GEN-LAST:event_jbtnIgualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -579,6 +625,7 @@ public class JFrameCalculadora extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbtnDivision;
+    private javax.swing.JButton jbtnIgual;
     private javax.swing.JButton jbtnMultiplicacion;
     private javax.swing.JButton jbtnNumero0;
     private javax.swing.JButton jbtnNumero1;

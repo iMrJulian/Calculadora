@@ -52,6 +52,18 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jbtnNumero5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jbtnNumero6" min="-2" pref="39" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jbtnNumero2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jbtnNumero3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jbtnNumeroF" alignment="0" max="32767" attributes="0"/>
@@ -68,27 +80,14 @@
                                   <Component id="jbtnNumero9" alignment="0" min="-2" pref="39" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jbtnNumero5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="jbtnNumero6" min="-2" pref="39" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jbtnNumero2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jbtnNumero3" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jbtnSuma" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jbtnResta" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jbtnMultiplicacion" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jbtnDivision" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jbtnSuma" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnResta" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnMultiplicacion" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnDivision" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnIgual" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -154,6 +153,7 @@
                   <Component id="jbtnNumeroC" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="jbtnNumeroD" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="jbtnNumeroE" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jbtnIgual" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jbtnNumeroF" min="-2" pref="31" max="-2" attributes="0"/>
@@ -390,6 +390,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnDivisionActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbtnIgual">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="="/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnIgualActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

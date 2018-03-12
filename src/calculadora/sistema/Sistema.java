@@ -11,8 +11,10 @@ package calculadora.sistema;
  */
 public class Sistema {
 
-    public String numero1;
+    public String numero1; 
     public String numero2;
+    public int operador;
+    public int sistemaNu;
   
 
     public Sistema() {
