@@ -4,21 +4,23 @@
  * and open the template in the editor.
  */
 package calculadora.gui;
-import calculadora.sistema.*;
+
+import calculadora.operador.*;
+import calculadora.conversor.*;
+
 /**
  *
  * @author Estudiantes
  */
 public class JFrameCalculadora extends javax.swing.JFrame {
-    Sistema display;
+    Conversor numeros;
+    Operaciones display;
     int cambioNumero;
     /**
      * Creates new form JFrameCalculadora
      */
     public JFrameCalculadora() {
         initComponents();
-        display = new Sistema();
-        cambioNumero = 1;   
     }
 
     /**
@@ -408,8 +410,9 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnResta.setEnabled(true);
         jbtnMultiplicacion.setEnabled(true);
         jbtnDivision.setEnabled(true);
-        
-        display.sistemaNu=1;
+        jbtnIgual.setEnabled(true);
+            
+        numeros = new Binario();
     }//GEN-LAST:event_jrbtnBinarioActionPerformed
 
     private void jrbtnOctalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnOctalActionPerformed
@@ -438,8 +441,9 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnResta.setEnabled(true);
         jbtnMultiplicacion.setEnabled(true);
         jbtnDivision.setEnabled(true);
+        jbtnIgual.setEnabled(true);
         
-        display.sistemaNu=2;
+        numeros = new Octal();
     }//GEN-LAST:event_jrbtnOctalActionPerformed
 
     private void jrbtnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnDecimalActionPerformed
@@ -468,8 +472,9 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnResta.setEnabled(true);
         jbtnMultiplicacion.setEnabled(true);
         jbtnDivision.setEnabled(true);
+        jbtnIgual.setEnabled(true);
         
-        display.sistemaNu=3;
+        numeros = new Decimal();
     }//GEN-LAST:event_jrbtnDecimalActionPerformed
 
     private void jrbtnHexaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnHexaActionPerformed
@@ -498,8 +503,9 @@ public class JFrameCalculadora extends javax.swing.JFrame {
         jbtnResta.setEnabled(true);
         jbtnMultiplicacion.setEnabled(true);
         jbtnDivision.setEnabled(true);
+        jbtnIgual.setEnabled(true);
         
-        display.sistemaNu=4;
+        numeros = new Hexadecimal();
     }//GEN-LAST:event_jrbtnHexaActionPerformed
 
     private void jbtnNumero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNumero2ActionPerformed
@@ -559,31 +565,36 @@ public class JFrameCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnNumeroFActionPerformed
 
     private void jbtnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSumaActionPerformed
-        
+        display = new Suma();
+        display.numero1=numeros.convertiradecimal(jtpDisplay.getText());
         jtpDisplay.setText("");
-        display.operador=1;
+
     }//GEN-LAST:event_jbtnSumaActionPerformed
 
     private void jbtnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRestaActionPerformed
-       display.numero1=jtpDisplay.getText();
+       display = new Resta();
+       display.numero1=numeros.convertiradecimal(jtpDisplay.getText());
        jtpDisplay.setText("");
-       display.operador=2;
+
     }//GEN-LAST:event_jbtnRestaActionPerformed
 
     private void jbtnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMultiplicacionActionPerformed
-        display.numero1=jtpDisplay.getText();
+        display = new Multiplicacion();
+        display.numero1=numeros.convertiradecimal(jtpDisplay.getText());
         jtpDisplay.setText("");
-        display.operador=3;
+
     }//GEN-LAST:event_jbtnMultiplicacionActionPerformed
 
     private void jbtnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDivisionActionPerformed
-        display.numero1=jtpDisplay.getText();
+        display = new Division();
+        display.numero1=numeros.convertiradecimal(jtpDisplay.getText());
         jtpDisplay.setText("");
-        display.operador=4;
+
     }//GEN-LAST:event_jbtnDivisionActionPerformed
 
     private void jbtnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnIgualActionPerformed
-        display.numero2=jtpDisplay.getText();
+        display.numero2=numeros.convertiradecimal(jtpDisplay.getText());
+        jtpDisplay.setText(numeros.convertirdedecimal(display.resultado()));
     }//GEN-LAST:event_jbtnIgualActionPerformed
 
     /**
