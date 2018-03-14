@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/estudiantes/Documents/NetBeansProjects/Calculadora/src/calculadora/sistema/Sistema.java</file>
-            <file>file:/C:/Users/estudiantes/Documents/NetBeansProjects/Calculadora/src/calculadora/Pirncipal.java</file>
-            <file>file:/C:/Users/estudiantes/Documents/NetBeansProjects/Calculadora/src/calculadora/gui/JFrameCalculadora.java</file>
+            <file>file:/C:/Users/leopa/Desktop/Calculadora-master/src/calculadora/conversor/Binario.java</file>
+            <file>file:/C:/Users/leopa/Desktop/Calculadora-master/src/calculadora/conversor/Conversor.java</file>
+            <file>file:/C:/Users/leopa/Desktop/Calculadora-master/src/calculadora/gui/JFrameCalculadora.java</file>
+            <file>file:/C:/Users/leopa/Desktop/Calculadora-master/src/calculadora/operador/Operaciones.java</file>
         </group>
     </open-files>
 </project-private>
