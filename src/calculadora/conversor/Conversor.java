@@ -7,11 +7,11 @@ package calculadora.conversor;
 
 /**
  *
- * @author Estudiantes
+ * @author Julian Rincon, Leonardo Wiesner, Juan Blanco
  */
 public abstract class Conversor {
     
-    public abstract int convertiradecimal(String numero);
+    public abstract int convertirADecimal(String numero);
     
-    public abstract String convertirdedecimal(int numero);
+    public abstract String convertirDeDecimal(int numero);
 }

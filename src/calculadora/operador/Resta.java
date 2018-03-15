@@ -7,12 +7,12 @@ package calculadora.operador;
 
 /**
  *
- * @author david
+ * @author Julian Rincon, Leonardo Wiesner, Juan Blanco
  */
 public class Resta extends Operaciones{
     @Override
      public int resultado (){
-        return numero1 - numero2;    
+        return this.getNumero1() - this.getNumero2();    
     }
     
 }

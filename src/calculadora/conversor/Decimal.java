@@ -7,16 +7,16 @@ package calculadora.conversor;
 
 /**
  *
- * @author Estudiantes
+ * @author Julian Rincon, Leonardo Wiesner, Juan Blanco
  */
 public class Decimal extends Conversor{
    @Override
-   public int convertiradecimal(String numero) {
+   public int convertirADecimal(String numero) {
        return Integer.parseInt(numero);
    }
    
    @Override
-   public String convertirdedecimal(int numero){
+   public String convertirDeDecimal(int numero){
          return Integer.toString(numero);
    }
 }
